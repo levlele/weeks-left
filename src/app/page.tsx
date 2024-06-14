@@ -79,7 +79,7 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8">
-      <h1 className="text-2xl font-bold md:text-center">
+      <h1 className="text-lg md:text-2xl font-bold md:text-center">
         The Scare Jump Procrastinator Calculator
       </h1>
       <main className="flex gap-4 mt-8 flex-col md:flex-row md:items-start">
@@ -173,6 +173,11 @@ export default function Home() {
           </CardFooter>
         </Card>
       </main>
+      <footer className="flex justify-center items-center pt-8">
+        <p className="text-xs">
+          Made with 🧠 by <a href="https://leandro-vilanova.com/">LEV/D</a>
+        </p>
+      </footer>
     </div>
   );
 }
