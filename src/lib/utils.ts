@@ -14,13 +14,12 @@ export const calculateDaysLived = (birthDateStr: string): number => {
 
 export const calculateSleepTime = (
   hoursSlept: number,
-  lifeExpectancy: number,
-  yearsLived: number
+  yearsLifeLeft: number
 ): { days: number; weeks: number; months: number; years: number } => {
-  const days = hoursSlept * 24;
+  const days = (hoursSlept / 24) * (yearsLifeLeft * 365.25);
   const weeks = days / 7;
   const months = days / 30;
-  const years = days / 365;
+  const years = days / 365.25;
 
   return { days, weeks, months, years };
 };
