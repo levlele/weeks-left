@@ -69,3 +69,9 @@
     flex: 0 0 calc((100% / 52) - (0.25rem * (51 / 52)));
   }
 }
+
+.vertical {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+}
