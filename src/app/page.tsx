@@ -7,6 +7,8 @@ import {
   Separator,
   Skeleton,
   CardFooter,
+  ScrollArea,
+  ScrollBar,
 } from "@/components/ui";
 import { CalculateForm, DataTable, renderWeekBoxes } from "@/components/";
 
@@ -119,45 +121,49 @@ export default function Home() {
             <div className="text-center pt-6 pb-1">
               <h3 className="text-[12px] leading-none h-4">Weeks</h3>
             </div>
-            <div className="flex flex-row justify-between gap-1 pl-8">
-              {Array.from({ length: 52 }).map((_, i) => (
-                <div key={i} className="text-[7px] w-full text-right">
-                  {i + 1}
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-1 mt-1">
-              <div className="flex items-center w-4">
-                <h3 className="text-[12px] leading-none vertical rotate-180">
-                  Years
-                </h3>
-              </div>
-              <div className="flex flex-col items-end justify-between w-3">
-                {Array.from({
-                  length: daysLived !== null ? Number(lifeExpectancy) : 20,
-                }).map((_, i) => (
-                  <div key={i} className="text-[8px]">
+
+            <ScrollArea className="w-full whitespace-nowrap">
+              <div className="flex flex-row justify-between gap-1 pl-8">
+                {Array.from({ length: 52 }).map((_, i) => (
+                  <div key={i} className="text-[7px] w-full text-right">
                     {i + 1}
                   </div>
                 ))}
               </div>
-              <div className="flex-1">
-                {daysLived !== null ? (
-                  <div className="boxes">
-                    {renderWeekBoxes(
-                      weeksLived ?? 0,
-                      (lifeExpectancy ?? 0) * 52,
-                      weeksWorked ?? 0,
-                      workWeeksLeft,
-                      sleepWeeksLeft,
-                      birthDate
-                    )}
-                  </div>
-                ) : (
-                  <Skeleton className="w-full h-auto aspect-video" />
-                )}
+              <div className="flex gap-1 mt-1">
+                <div className="flex items-center w-4">
+                  <h3 className="text-[12px] leading-none vertical rotate-180">
+                    Years
+                  </h3>
+                </div>
+                <div className="flex flex-col items-end justify-between w-3">
+                  {Array.from({
+                    length: daysLived !== null ? Number(lifeExpectancy) : 20,
+                  }).map((_, i) => (
+                    <div key={i} className="text-[8px]">
+                      {i + 1}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex-1">
+                  {daysLived !== null ? (
+                    <div className="boxes">
+                      {renderWeekBoxes(
+                        weeksLived ?? 0,
+                        (lifeExpectancy ?? 0) * 52,
+                        weeksWorked ?? 0,
+                        workWeeksLeft,
+                        sleepWeeksLeft,
+                        birthDate
+                      )}
+                    </div>
+                  ) : (
+                    <Skeleton className="w-full h-auto aspect-video" />
+                  )}
+                </div>
               </div>
-            </div>
+              <ScrollBar orientation="horizontal" />
+            </ScrollArea>
           </CardContent>
           <CardFooter className="flex-col items-start pl-14">
             <p className="text-xs">
