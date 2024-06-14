@@ -20,6 +20,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
+  Skeleton,
 } from "@/components/ui";
 import { renderWeekBoxes } from "@/components/render-boxes";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -182,13 +183,13 @@ export default function Home() {
                           <span className="leading-none">Life Lived</span>
                         </TableCell>
                         <TableCell className="text-right">
-                          {daysLived}
+                          {daysLived ? daysLived : "0"}
                         </TableCell>
                         <TableCell className="text-right">
-                          {weeksLived}
+                          {weeksLived ? weeksLived : "0"}
                         </TableCell>
                         <TableCell className="text-right">
-                          {yearsLived}
+                          {yearsLived ? yearsLived : "0"}
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -300,14 +301,7 @@ export default function Home() {
                           )}
                         </div>
                       ) : (
-                        <div className="boxes">
-                          {Array.from({ length: 1040 }).map((_, i) => (
-                            <div
-                              key={i}
-                              className="aspect-square bg-secondary"
-                            />
-                          ))}
-                        </div>
+                        <Skeleton className="w-full h-auto aspect-video" />
                       )}
                     </div>
                   </div>

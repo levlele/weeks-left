@@ -5,4 +5,5 @@ export * from "./input";
 export * from "./label";
 export * from "./resizable";
 export * from "./separator";
+export * from "./skeleton";
 export * from "./table";
