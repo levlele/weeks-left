@@ -6,6 +6,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
+  TableFooter,
 } from "./ui";
 
 interface DataTableProps {
@@ -97,6 +98,8 @@ export function DataTable({
             <TableCell className="text-right">{sleepWeeksLeft}</TableCell>
             <TableCell className="text-right">{sleepYearsLeft}</TableCell>
           </TableRow>
+        </TableBody>
+        <TableFooter>
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-red-500" />
@@ -106,7 +109,7 @@ export function DataTable({
             <TableCell className="text-right">{weeksLifeLeft}</TableCell>
             <TableCell className="text-right">{yearsLifeLeft}</TableCell>
           </TableRow>
-        </TableBody>
+        </TableFooter>
       </Table>
     </CardContent>
   );

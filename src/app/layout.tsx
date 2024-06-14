@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
   title: "The Scare Jump Procrastinator Calculator",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${GeistMono.variable} min-h-screen bg-background font-mono antialiased`}
+        className={`${GeistMono.variable} min-h-screen bg-background font-mono antialiased relative`}
       >
         <ThemeProvider
           attribute="class"
@@ -25,6 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ModeToggle className="absolute top-4 right-4 md:top-8 md:right-8" />
           {children}
         </ThemeProvider>
       </body>
