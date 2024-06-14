@@ -9,6 +9,6 @@ App to display the number of weeks left in your life, based on your birth date, 
 - [ ] Add retirement age based on country and gender.
 - [ ] Fix sleep hours logic.
 - [ ] Add transition in the boxes display.
-- [ ] Divide page.tsx into smaller components.
+- [-] Divide page.tsx into smaller components.
 - [ ] Refactor logic to use useReducer.
 - [ ] Add tests.
