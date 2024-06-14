@@ -1,13 +1,12 @@
 import "@/styles/globals.css";
-import { Inter as FontSans } from "next/font/google";
+import type { Metadata } from "next";
+import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import { cn } from "@/lib/utils";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+export const metadata: Metadata = {
+  title: "The Scare Jump Procrastinator Calculator",
+  description: "Calculate your remaining life years!",
+};
 
 export default function RootLayout({
   children,
@@ -18,14 +17,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
+        className={`${GeistMono.variable} min-h-screen bg-background font-mono antialiased`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
