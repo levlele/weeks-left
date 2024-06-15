@@ -1,5 +1,6 @@
 export * from "./calculate-form";
 export * from "./data-table";
+export * from "./language-toggle";
 export * from "./mode-toggle";
 export * from "./render-boxes";
 export * from "./theme-provider";
@@ -10,6 +11,7 @@ export * from "./ui/form";
 export * from "./ui/input";
 export * from "./ui/label";
 export * from "./ui/resizable";
+export * from "./ui/scroll-area";
 export * from "./ui/separator";
 export * from "./ui/skeleton";
 export * from "./ui/table";

@@ -7,6 +7,8 @@ import {
   CardContent,
   Label,
 } from "@/components/ui";
+import texts from "@/locales/texts.json";
+import { useLanguage } from "@/context/language-context";
 
 interface CalculateFormProps {
   birthDate: string;
@@ -35,16 +37,17 @@ export function CalculateForm({
   setSleepHoursPerDay,
   handleCalculate,
 }: CalculateFormProps) {
+  const { language } = useLanguage();
   return (
     <>
       <CardHeader>
-        <CardTitle>Calculate Weeks Left</CardTitle>
+        <CardTitle>{texts[language].calculate_weeks_left}</CardTitle>
         <CardDescription>
-          Enter your birth date to calculate the time you have lived.
+          {texts[language].calculate_weeks_left_description}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Label htmlFor="birthDate">Birth Date</Label>
+        <Label htmlFor="birthDate">{texts[language].birth_date}</Label>
         <Input
           id="birthDate"
           type="date"
@@ -53,7 +56,9 @@ export function CalculateForm({
           onChange={(e) => setBirthDate(e.target.value)}
           required
         />
-        <Label htmlFor="lifeExpectancy">Life Expectancy In Your Country</Label>
+        <Label htmlFor="lifeExpectancy">
+          {texts[language].life_expectancy}
+        </Label>
         <Input
           id="lifeExpectancy"
           type="number"
@@ -63,7 +68,7 @@ export function CalculateForm({
           placeholder="Expected Life Expectancy"
           required
         />
-        <Label htmlFor="yearsWorked">Years Worked</Label>
+        <Label htmlFor="yearsWorked">{texts[language].years_worked}</Label>
         <Input
           id="yearsWorked"
           type="number"
@@ -73,7 +78,7 @@ export function CalculateForm({
           placeholder="Years Worked"
           required
         />
-        <Label htmlFor="retirementAge">Retirement Age</Label>
+        <Label htmlFor="retirementAge">{texts[language].retirement_age}</Label>
         <Input
           id="retirementAge"
           type="number"
@@ -83,7 +88,9 @@ export function CalculateForm({
           placeholder="Retirement Age"
           required
         />
-        <Label htmlFor="sleepHoursPerDay">Sleep Hours Per Day</Label>
+        <Label htmlFor="sleepHoursPerDay">
+          {texts[language].sleep_hours_per_day}
+        </Label>
         <Input
           id="sleepHoursPerDay"
           type="number"
@@ -94,7 +101,7 @@ export function CalculateForm({
           required
         />
         <Button onClick={handleCalculate} className="mt-4">
-          Calculate
+          {texts[language].calculate}
         </Button>
       </CardContent>
     </>

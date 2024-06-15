@@ -8,6 +8,8 @@ import {
   TableRow,
   TableFooter,
 } from "./ui";
+import texts from "@/locales/texts.json";
+import { useLanguage } from "@/context/language-context";
 
 interface DataTableProps {
   daysLived: number | null;
@@ -44,22 +46,32 @@ export function DataTable({
   weeksLifeLeft,
   yearsLifeLeft,
 }: DataTableProps) {
+  const { language } = useLanguage();
+
   return (
     <CardContent>
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Time Spent</TableHead>
-            <TableHead className="text-right">Days</TableHead>
-            <TableHead className="text-right">Weeks</TableHead>
-            <TableHead className="text-right">Years</TableHead>
+            <TableHead>{texts[language].table_time_spent}</TableHead>
+            <TableHead className="text-right">
+              {texts[language].table_days}
+            </TableHead>
+            <TableHead className="text-right">
+              {texts[language].table_weeks}
+            </TableHead>
+            <TableHead className="text-right">
+              {texts[language].table_years}
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-blue-500" />
-              <span className="leading-none">Life Lived</span>
+              <span className="leading-none">
+                {texts[language].table_life_lived}
+              </span>
             </TableCell>
             <TableCell className="text-right">
               {daysLived ? daysLived : "0"}
@@ -74,7 +86,9 @@ export function DataTable({
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-blue-700" />
-              <span className="leading-none">Life Worked</span>
+              <span className="leading-none">
+                {texts[language].table_life_worked}
+              </span>
             </TableCell>
             <TableCell className="text-right">{daysWorked}</TableCell>
             <TableCell className="text-right">{weeksWorked}</TableCell>
@@ -83,7 +97,9 @@ export function DataTable({
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-red-400" />
-              <span className="leading-none">Work Left</span>
+              <span className="leading-none">
+                {texts[language].table_work_left}
+              </span>
             </TableCell>
             <TableCell className="text-right">{workDaysLeft}</TableCell>
             <TableCell className="text-right">{workWeeksLeft}</TableCell>
@@ -92,7 +108,9 @@ export function DataTable({
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-purple-500" />
-              <span className="leading-none">Sleep Left</span>
+              <span className="leading-none">
+                {texts[language].table_sleep_left}
+              </span>
             </TableCell>
             <TableCell className="text-right">{sleepDaysLeft}</TableCell>
             <TableCell className="text-right">{sleepWeeksLeft}</TableCell>
@@ -103,7 +121,9 @@ export function DataTable({
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <span className="block size-4 bg-red-500" />
-              <span className="leading-none">Life Left</span>
+              <span className="leading-none">
+                {texts[language].table_life_left}
+              </span>
             </TableCell>
             <TableCell className="text-right">{daysLifeLeft}</TableCell>
             <TableCell className="text-right">{weeksLifeLeft}</TableCell>
