@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
@@ -75,9 +74,6 @@ const config = {
       },
       fontFamily: {
         mono: ["var(--font-geist-mono)"],
-      },
-      backgroundImage: {
-        fondo: "url('/background.jpeg')",
       },
     },
   },
