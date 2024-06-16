@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/context/LanguageContext";
 import {
   Button,
   DropdownMenu,

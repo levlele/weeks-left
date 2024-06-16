@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeProvider } from "@/context/ThemeProvider";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export const metadata: Metadata = {
   title: "The Scare Jump Procrastinator Calculator",

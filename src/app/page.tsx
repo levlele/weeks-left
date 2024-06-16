@@ -10,9 +10,13 @@ import {
   ScrollArea,
   ScrollBar,
 } from "@/components/ui";
-import { CalculateForm, DataTable, renderWeekBoxes } from "@/components/";
-import { LanguageProvider, useLanguage } from "@/context/language-context";
-import { LanguageToggle } from "@/components/language-toggle";
+import {
+  CalculateForm,
+  DataTable,
+  renderWeekBoxes,
+  LanguageToggle,
+} from "@/components/";
+import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 import texts from "@/locales/texts.json";
 
 function HomeContent() {
@@ -173,9 +177,7 @@ function HomeContent() {
             </ScrollArea>
           </CardContent>
           <CardFooter className="flex-col items-start pl-14">
-            <p className="text-xs">
-              {texts[language].weeks_description}
-            </p>
+            <p className="text-xs">{texts[language].weeks_description}</p>
           </CardFooter>
         </Card>
       </main>

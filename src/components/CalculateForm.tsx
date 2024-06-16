@@ -8,7 +8,7 @@ import {
   Label,
 } from "@/components/ui";
 import texts from "@/locales/texts.json";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface CalculateFormProps {
   birthDate: string;

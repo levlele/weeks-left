@@ -9,7 +9,7 @@ import {
   TableFooter,
 } from "./ui";
 import texts from "@/locales/texts.json";
-import { useLanguage } from "@/context/language-context";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface DataTableProps {
   daysLived: number | null;
