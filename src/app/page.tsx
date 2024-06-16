@@ -6,9 +6,10 @@ import {
   CardContent,
   Separator,
   Skeleton,
-  CardFooter,
   ScrollArea,
   ScrollBar,
+  CardHeader,
+  CardDescription,
 } from "@/components/ui";
 import {
   CalculateForm,
@@ -91,8 +92,8 @@ function HomeContent() {
       <h1 className="text-balance text-lg md:text-2xl font-bold md:text-center">
         {texts[language].title}
       </h1>
-      <main className="flex gap-4 mt-8 flex-col md:flex-row md:items-start">
-        <Card className="p-2 md:p-4 md:basis-1/2">
+      <main className="flex gap-4 mt-12 flex-col md:flex-row md:items-start">
+        <Card className="md:basis-1/2">
           <CalculateForm
             birthDate={birthDate}
             setBirthDate={setBirthDate}
@@ -126,8 +127,13 @@ function HomeContent() {
           />
         </Card>
         <Card className="pt-2 md:pt-1 md:w-full">
-          <CardContent>
-            <div className="text-center pt-6 pb-1">
+          <CardHeader>
+            <CardDescription className="text-center">
+              {texts[language].weeks_description}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="pl-2">
+            <div className="text-center pb-1">
               <h3 className="text-[12px] leading-none h-4">
                 {texts[language].weeks}
               </h3>
@@ -176,12 +182,9 @@ function HomeContent() {
               <ScrollBar orientation="horizontal" />
             </ScrollArea>
           </CardContent>
-          <CardFooter className="flex-col items-start pl-14">
-            <p className="text-xs">{texts[language].weeks_description}</p>
-          </CardFooter>
         </Card>
       </main>
-      <footer className="flex justify-center items-center pt-8">
+      <footer className="flex justify-center items-center py-8">
         <p
           className="text-xs"
           dangerouslySetInnerHTML={{ __html: texts[language].footer || "" }}

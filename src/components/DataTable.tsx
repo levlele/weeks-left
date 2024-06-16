@@ -68,7 +68,7 @@ export function DataTable({
         <TableBody>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <span className="block size-4 bg-blue-500" />
+              <span className="block size-4 bg-green-500" />
               <span className="leading-none">
                 {texts[language].table_life_lived}
               </span>
@@ -85,7 +85,7 @@ export function DataTable({
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <span className="block size-4 bg-blue-700" />
+              <span className="block size-4 bg-green-700" />
               <span className="leading-none">
                 {texts[language].table_life_worked}
               </span>
@@ -96,7 +96,7 @@ export function DataTable({
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <span className="block size-4 bg-red-400" />
+              <span className="block size-4 bg-red-500" />
               <span className="leading-none">
                 {texts[language].table_work_left}
               </span>
@@ -107,7 +107,7 @@ export function DataTable({
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <span className="block size-4 bg-purple-500" />
+              <span className="block size-4 bg-red-700" />
               <span className="leading-none">
                 {texts[language].table_sleep_left}
               </span>
@@ -120,7 +120,7 @@ export function DataTable({
         <TableFooter>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <span className="block size-4 bg-red-500" />
+              <span className="block size-4 bg-red-900" />
               <span className="leading-none">
                 {texts[language].table_life_left}
               </span>
