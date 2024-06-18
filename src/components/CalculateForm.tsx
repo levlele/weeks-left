@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import {
   Input,
   Button,
@@ -42,6 +43,58 @@ export function CalculateForm({
   handleCalculate,
 }: CalculateFormProps) {
   const { language } = useLanguage();
+
+  const inputFields = [
+    {
+      id: "birthDate",
+      label: texts[language].birth_date,
+      type: "date",
+      value: birthDate,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setBirthDate(e.target.value),
+    },
+    {
+      id: "lifeExpectancy",
+      label: texts[language].life_expectancy,
+      type: "number",
+      value: lifeExpectancy,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setLifeExpectancy(Number(e.target.value)),
+    },
+    {
+      id: "yearsWorked",
+      label: texts[language].years_worked,
+      type: "number",
+      value: yearsWorked,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setYearsWorked(Number(e.target.value)),
+    },
+    {
+      id: "workHoursPerDay",
+      label: texts[language].hours_worked_per_day,
+      type: "number",
+      value: workHoursPerDay,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setWorkHoursPerDay(Number(e.target.value)),
+    },
+    {
+      id: "retirementAge",
+      label: texts[language].retirement_age,
+      type: "number",
+      value: retirementAge,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setRetirementAge(Number(e.target.value)),
+    },
+    {
+      id: "sleepHoursPerDay",
+      label: texts[language].sleep_hours_per_day,
+      type: "number",
+      value: sleepHoursPerDay,
+      onChange: (e: ChangeEvent<HTMLInputElement>) =>
+        setSleepHoursPerDay(Number(e.target.value)),
+    },
+  ];
+
   return (
     <>
       <CardHeader>
@@ -51,71 +104,20 @@ export function CalculateForm({
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Label htmlFor="birthDate">{texts[language].birth_date}</Label>
-        <Input
-          id="birthDate"
-          type="date"
-          value={birthDate}
-          className="mt-2 mb-4"
-          onChange={(e) => setBirthDate(e.target.value)}
-          required
-        />
-        <Label htmlFor="lifeExpectancy">
-          {texts[language].life_expectancy}
-        </Label>
-        <Input
-          id="lifeExpectancy"
-          type="number"
-          value={lifeExpectancy}
-          className="mt-2 mb-4"
-          onChange={(e) => setLifeExpectancy(Number(e.target.value))}
-          placeholder={texts[language].life_expectancy}
-          required
-        />
-        <Label htmlFor="yearsWorked">{texts[language].years_worked}</Label>
-        <Input
-          id="yearsWorked"
-          type="number"
-          value={yearsWorked}
-          className="mt-2 mb-4"
-          onChange={(e) => setYearsWorked(Number(e.target.value))}
-          placeholder="Years Worked"
-          required
-        />
-        <Label htmlFor="workHoursPerDay">
-          {texts[language].hours_worked_per_day}
-        </Label>
-        <Input
-          id="workHoursPerDay"
-          type="number"
-          value={workHoursPerDay}
-          className="mt-2 mb-4"
-          onChange={(e) => setWorkHoursPerDay(Number(e.target.value))}
-          placeholder="Hours Worked Per Day"
-          required
-        />
-        <Label htmlFor="retirementAge">{texts[language].retirement_age}</Label>
-        <Input
-          id="retirementAge"
-          type="number"
-          value={retirementAge}
-          className="mt-2 mb-4"
-          onChange={(e) => setRetirementAge(Number(e.target.value))}
-          placeholder="Retirement Age"
-          required
-        />
-        <Label htmlFor="sleepHoursPerDay">
-          {texts[language].sleep_hours_per_day}
-        </Label>
-        <Input
-          id="sleepHoursPerDay"
-          type="number"
-          value={sleepHoursPerDay}
-          className="mt-2 mb-4"
-          onChange={(e) => setSleepHoursPerDay(Number(e.target.value))}
-          placeholder="Sleep Hours Per Day"
-          required
-        />
+        {inputFields.map((field) => (
+          <div key={field.id}>
+            <Label htmlFor={field.id}>{field.label}</Label>
+            <Input
+              id={field.id}
+              type={field.type}
+              value={field.value}
+              className="mt-2 mb-4"
+              onChange={field.onChange}
+              placeholder={field.label}
+              required
+            />
+          </div>
+        ))}
         <Button onClick={handleCalculate} className="mt-4">
           {texts[language].calculate}
         </Button>
