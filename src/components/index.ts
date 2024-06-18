@@ -3,6 +3,7 @@ export * from "./DataTable";
 export * from "./LanguageToggle";
 export * from "./ModeToggle";
 export * from "./RenderBoxes";
+export * from "./RenderWeeks";
 export * from "./ui/button";
 export * from "./ui/card";
 export * from "./ui/dropdown-menu";

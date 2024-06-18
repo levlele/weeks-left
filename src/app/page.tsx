@@ -6,23 +6,13 @@ import {
   calculateSleepTime,
   calculateWorkTime,
 } from "@/lib/utils";
-import {
-  Card,
-  CardContent,
-  Separator,
-  Skeleton,
-  ScrollArea,
-  ScrollBar,
-  CardHeader,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui";
+import { Card, Separator, CardFooter } from "@/components/ui";
 import {
   CalculateForm,
   DataTable,
-  renderWeekBoxes,
   LanguageToggle,
   ModeToggle,
+  RenderWeeks,
 } from "@/components/";
 import texts from "@/locales/texts.json";
 
@@ -137,62 +127,15 @@ function HomeContent() {
           </CardFooter>
         </Card>
         <Card className="pt-2 md:pt-1 md:w-full">
-          <CardHeader>
-            <CardDescription className="text-center">
-              {texts[language].weeks_description}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {/* <CardContent className="pl-2"> */}
-            {/* <div className="text-center pb-1">
-              <h3 className="text-[12px] leading-none h-4">
-                {texts[language].weeks}
-              </h3>
-            </div> */}
-
-            <ScrollArea className="w-full whitespace-nowrap">
-              <div className="flex flex-row justify-evenly gap-0.5 pl-4">
-                {Array.from({ length: 52 }).map((_, i) => (
-                  <div key={i} className="text-[7px] w-full text-center">
-                    {i + 1}
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-1 mt-1">
-                {/* <div className="flex items-center w-4">
-                  <h3 className="text-[12px] leading-none vertical rotate-180">
-                    {texts[language].years}
-                  </h3>
-                </div> */}
-                <div className="flex flex-col items-end justify-between w-3">
-                  {Array.from({
-                    length: daysLived !== 0 ? Number(lifeExpectancy) : 20,
-                  }).map((_, i) => (
-                    <div key={i} className="text-[8px]">
-                      {i + 1}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex-1">
-                  {daysLived !== 0 ? (
-                    <div className="boxes">
-                      {renderWeekBoxes(
-                        weeksLived ?? 0,
-                        (lifeExpectancy ?? 0) * 52,
-                        weeksWorked ?? 0,
-                        workWeeksLeft ?? 0,
-                        sleepWeeksLeft ?? 0,
-                        birthDate
-                      )}
-                    </div>
-                  ) : (
-                    <Skeleton className="w-full h-auto aspect-video" />
-                  )}
-                </div>
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
-          </CardContent>
+          <RenderWeeks
+            daysLived={daysLived}
+            weeksLived={weeksLived}
+            weeksWorked={weeksWorked}
+            workWeeksLeft={workWeeksLeft}
+            sleepWeeksLeft={sleepWeeksLeft}
+            lifeExpectancy={lifeExpectancy}
+            birthDate={birthDate}
+          />
         </Card>
       </main>
     </div>
