@@ -10,6 +10,7 @@ import {
 } from "@/components/ui";
 import { renderWeekBoxes } from "@/components/";
 import texts from "@/locales/texts.json";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface RenderWeeksProps {
   daysLived: number | null;
@@ -59,20 +60,35 @@ export function RenderWeeks({
               ))}
             </div>
             <div className="flex-1">
-              {daysLived !== 0 ? (
-                <div className="boxes">
-                  {renderWeekBoxes(
-                    weeksLived ?? 0,
-                    (lifeExpectancy ?? 0) * 52,
-                    weeksWorked ?? 0,
-                    workWeeksLeft ?? 0,
-                    sleepWeeksLeft ?? 0,
-                    birthDate
-                  )}
-                </div>
-              ) : (
-                <Skeleton className="w-full h-auto aspect-video" />
-              )}
+              <AnimatePresence mode="wait">
+                {daysLived !== 0 ? (
+                  <motion.div
+                    className="boxes"
+                    key="renderedBoxes"
+                    initial={{ opacity: 0, translateY: 100 }}
+                    animate={{ opacity: 1, translateY: 0 }}
+                    exit={{ opacity: 0, translateY: 100 }}
+                  >
+                    {renderWeekBoxes(
+                      weeksLived ?? 0,
+                      (lifeExpectancy ?? 0) * 52,
+                      weeksWorked ?? 0,
+                      workWeeksLeft ?? 0,
+                      sleepWeeksLeft ?? 0,
+                      birthDate
+                    )}
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="skeletonBoxes"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Skeleton className="w-full h-auto aspect-video" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
           <ScrollBar orientation="horizontal" />
