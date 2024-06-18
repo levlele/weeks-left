@@ -23,3 +23,13 @@ export const calculateSleepTime = (
 
   return { days, weeks, months, years };
 };
+
+export const calculateWorkTime = (
+  hoursWorked: number,
+  workYearsLeft: number
+): { days: number; weeks: number; years: number } => {
+  const days = (hoursWorked / 24) * (workYearsLeft * 365.25);
+  const weeks = days / 7;
+  const years = days / 365.25;
+  return { days, weeks, years };
+};
