@@ -15,6 +15,7 @@ import {
   ScrollBar,
   CardHeader,
   CardDescription,
+  CardFooter,
 } from "@/components/ui";
 import {
   CalculateForm,
@@ -28,6 +29,7 @@ import texts from "@/locales/texts.json";
 function HomeContent() {
   const { language } = useLanguage();
 
+  // const [birthDate, setBirthDate] = useState<string>("1984-05-15");
   const [birthDate, setBirthDate] = useState<string>("");
   const [daysLived, setDaysLived] = useState<number>(0);
   const [weeksLived, setWeeksLived] = useState<number>(0);
@@ -87,8 +89,8 @@ function HomeContent() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-4 md:p-8">
-      <h1 className="text-balance text-lg md:text-2xl font-bold md:text-center">
+    <div className="max-w-7xl mx-auto p-4 md:p-8 md:py-14">
+      <h1 className="text-balance text-lg md:text-2xl font-bold">
         {texts[language].title}
       </h1>
       <main className="flex gap-4 mt-12 flex-col md:flex-row md:items-start">
@@ -126,6 +128,13 @@ function HomeContent() {
             weeksLifeLeft={weeksLifeLeft}
             yearsLifeLeft={yearsLifeLeft}
           />
+          <Separator />
+          <CardFooter className="justify-center pt-6">
+            <p
+              className="text-xs"
+              dangerouslySetInnerHTML={{ __html: texts[language].footer || "" }}
+            />
+          </CardFooter>
         </Card>
         <Card className="pt-2 md:pt-1 md:w-full">
           <CardHeader>
@@ -133,27 +142,28 @@ function HomeContent() {
               {texts[language].weeks_description}
             </CardDescription>
           </CardHeader>
-          <CardContent className="pl-2">
-            <div className="text-center pb-1">
+          <CardContent>
+            {/* <CardContent className="pl-2"> */}
+            {/* <div className="text-center pb-1">
               <h3 className="text-[12px] leading-none h-4">
                 {texts[language].weeks}
               </h3>
-            </div>
+            </div> */}
 
             <ScrollArea className="w-full whitespace-nowrap">
-              <div className="flex flex-row justify-between gap-1 pl-8">
+              <div className="flex flex-row justify-evenly gap-0.5 pl-4">
                 {Array.from({ length: 52 }).map((_, i) => (
-                  <div key={i} className="text-[7px] w-full text-right">
+                  <div key={i} className="text-[7px] w-full text-center">
                     {i + 1}
                   </div>
                 ))}
               </div>
               <div className="flex gap-1 mt-1">
-                <div className="flex items-center w-4">
+                {/* <div className="flex items-center w-4">
                   <h3 className="text-[12px] leading-none vertical rotate-180">
                     {texts[language].years}
                   </h3>
-                </div>
+                </div> */}
                 <div className="flex flex-col items-end justify-between w-3">
                   {Array.from({
                     length: daysLived !== 0 ? Number(lifeExpectancy) : 20,
@@ -185,12 +195,6 @@ function HomeContent() {
           </CardContent>
         </Card>
       </main>
-      <footer className="flex justify-center items-center py-8">
-        <p
-          className="text-xs"
-          dangerouslySetInnerHTML={{ __html: texts[language].footer || "" }}
-        />
-      </footer>
     </div>
   );
 }
@@ -204,8 +208,8 @@ export default function Home() {
       disableTransitionOnChange
     >
       <LanguageProvider>
-        <LanguageToggle className="absolute top-4 right-16 md:top-8 md:right-20" />
-        <ModeToggle className="absolute top-4 right-4 md:top-8 md:right-8" />
+        <LanguageToggle className="absolute top-4 right-16 md:top-12 md:right-20" />
+        <ModeToggle className="absolute top-4 right-4 md:top-12 md:right-8" />
         <HomeContent />
       </LanguageProvider>
     </ThemeProvider>
