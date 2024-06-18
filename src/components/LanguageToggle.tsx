@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components";
+import texts from "@/locales/texts.json";
 
 export function LanguageToggle({ className }: { className?: string }) {
   const { language, setLanguage } = useLanguage();
@@ -31,10 +32,10 @@ export function LanguageToggle({ className }: { className?: string }) {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={() => setLanguage("en")}>
-            English
+            {texts[language].en}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setLanguage("es")}>
-            Spanish
+            {texts[language].es}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

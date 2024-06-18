@@ -3,6 +3,7 @@
 import * as React from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/context/LanguageContext";
 
 import {
   Button,
@@ -11,9 +12,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components";
+import texts from "@/locales/texts.json";
 
 export function ModeToggle({ className }: { className?: string }) {
   const { setTheme } = useTheme();
+  const { language } = useLanguage();
 
   return (
     <div className={className}>
@@ -27,13 +30,13 @@ export function ModeToggle({ className }: { className?: string }) {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={() => setTheme("light")}>
-            Light
+            {texts[language].light}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setTheme("dark")}>
-            Dark
+            {texts[language].dark}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setTheme("system")}>
-            System
+            {texts[language].system}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
