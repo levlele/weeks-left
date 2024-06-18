@@ -35,7 +35,7 @@ export function RenderWeeks({
   return (
     <>
       <CardHeader>
-        <CardDescription className="text-center">
+        <CardDescription className="md:text-center">
           {texts[language].weeks_description}
         </CardDescription>
       </CardHeader>
