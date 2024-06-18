@@ -20,6 +20,31 @@ function HomeContent() {
   const { language } = useLanguage();
 
   // const [birthDate, setBirthDate] = useState<string>("1984-05-15");
+  // const [daysLived, setDaysLived] = useState<number>(0);
+  // const [weeksLived, setWeeksLived] = useState<number>(0);
+  // const [yearsLived, setYearsLived] = useState<number>(0);
+
+  // const [daysWorked, setDaysWorked] = useState<number>(0);
+  // const [yearsWorked, setYearsWorked] = useState<number>(23);
+  // const [weeksWorked, setWeeksWorked] = useState<number>(0);
+
+  // const [lifeExpectancy, setLifeExpectancy] = useState<number>(72);
+  // const [retirementAge, setRetirementAge] = useState<number>(65);
+
+  // const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
+  // const [weeksLifeLeft, setWeeksLifeLeft] = useState<number>(0);
+  // const [yearsLifeLeft, setYearsLifeLeft] = useState<number>(0);
+
+  // const [workHoursPerDay, setWorkHoursPerDay] = useState<number>(8);
+  // const [workDaysLeft, setWorkDaysLeft] = useState<number>(0);
+  // const [workWeeksLeft, setWorkWeeksLeft] = useState<number>(0);
+  // const [workYearsLeft, setWorkYearsLeft] = useState<number>(0);
+
+  // const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number>(8);
+  // const [sleepDaysLeft, setSleepDaysLeft] = useState<number>(0);
+  // const [sleepWeeksLeft, setSleepWeeksLeft] = useState<number>(0);
+  // const [sleepYearsLeft, setSleepYearsLeft] = useState<number>(0);
+
   const [birthDate, setBirthDate] = useState<string>("");
   const [daysLived, setDaysLived] = useState<number>(0);
   const [weeksLived, setWeeksLived] = useState<number>(0);
