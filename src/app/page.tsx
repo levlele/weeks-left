@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import { calculateDaysLived, calculateSleepTime } from "@/lib/utils";
+import { ThemeProvider, LanguageProvider, useLanguage } from "@/context/";
+import {
+  calculateDaysLived,
+  calculateSleepTime,
+  calculateWorkTime,
+} from "@/lib/utils";
 import {
   Card,
   CardContent,
@@ -16,41 +21,37 @@ import {
   DataTable,
   renderWeekBoxes,
   LanguageToggle,
+  ModeToggle,
 } from "@/components/";
-import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 import texts from "@/locales/texts.json";
 
 function HomeContent() {
   const { language } = useLanguage();
 
-  const [birthDate, setBirthDate] = useState<string>("1984-05-15");
-  const [daysLived, setDaysLived] = useState<number | null>(null);
-  const [weeksLived, setWeeksLived] = useState<number | null>(null);
-  const [yearsLived, setYearsLived] = useState<number | null>(null);
+  const [birthDate, setBirthDate] = useState<string>("");
+  const [daysLived, setDaysLived] = useState<number>(0);
+  const [weeksLived, setWeeksLived] = useState<number>(0);
+  const [yearsLived, setYearsLived] = useState<number>(0);
 
   const [daysWorked, setDaysWorked] = useState<number>(0);
-  const [yearsWorked, setYearsWorked] = useState<number>(23);
+  const [yearsWorked, setYearsWorked] = useState<number>(0);
   const [weeksWorked, setWeeksWorked] = useState<number>(0);
 
-  const [lifeExpectancy, setLifeExpectancy] = useState<number>(72);
-  const [retirementAge, setRetirementAge] = useState<number>(65);
+  const [lifeExpectancy, setLifeExpectancy] = useState<number>(0);
+  const [retirementAge, setRetirementAge] = useState<number>(0);
 
   const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
   const [weeksLifeLeft, setWeeksLifeLeft] = useState<number>(0);
   const [yearsLifeLeft, setYearsLifeLeft] = useState<number>(0);
 
+  const [workHoursPerDay, setWorkHoursPerDay] = useState<number>(0);
   const [workDaysLeft, setWorkDaysLeft] = useState<number>(0);
   const [workWeeksLeft, setWorkWeeksLeft] = useState<number>(0);
   const [workYearsLeft, setWorkYearsLeft] = useState<number>(0);
 
-  const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number>(8);
-  // const [sleepHoursPerWeek, setSleepHoursPerWeek] = useState<number>(0);
-  // const [sleepHoursPerMonth, setSleepHoursPerMonth] = useState<number>(0);
-  // const [sleepHoursPerYear, setSleepHoursPerYear] = useState<number>(0);
-
+  const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number>(0);
   const [sleepDaysLeft, setSleepDaysLeft] = useState<number>(0);
   const [sleepWeeksLeft, setSleepWeeksLeft] = useState<number>(0);
-  const [sleepMonthsLeft, setSleepMonthsLeft] = useState<number>(0);
   const [sleepYearsLeft, setSleepYearsLeft] = useState<number>(0);
 
   const handleCalculate = () => {
@@ -74,16 +75,14 @@ function HomeContent() {
     setWeeksLifeLeft(weeksLifeLeft);
 
     const workYearsLeft = retirementAge - yearsLived;
+    const workTime = calculateWorkTime(workHoursPerDay, workYearsLeft);
+    setWorkDaysLeft(Math.floor(workTime.days));
+    setWorkWeeksLeft(Math.floor(workTime.weeks));
     setWorkYearsLeft(workYearsLeft);
-    const workDaysLeft = Math.floor(workYearsLeft * 365.25);
-    setWorkDaysLeft(workDaysLeft);
-    const workWeeksLeft = Math.floor(workDaysLeft / 7);
-    setWorkWeeksLeft(workWeeksLeft);
 
     const sleepTime = calculateSleepTime(sleepHoursPerDay, yearsLifeLeft);
     setSleepDaysLeft(Math.floor(sleepTime.days));
     setSleepWeeksLeft(Math.floor(sleepTime.weeks));
-    setSleepMonthsLeft(Math.floor(sleepTime.months));
     setSleepYearsLeft(Math.floor(sleepTime.years));
   };
 
@@ -101,6 +100,8 @@ function HomeContent() {
             setLifeExpectancy={setLifeExpectancy}
             yearsWorked={yearsWorked}
             setYearsWorked={setYearsWorked}
+            workHoursPerDay={workHoursPerDay}
+            setWorkHoursPerDay={setWorkHoursPerDay}
             retirementAge={retirementAge}
             setRetirementAge={setRetirementAge}
             sleepHoursPerDay={sleepHoursPerDay}
@@ -155,7 +156,7 @@ function HomeContent() {
                 </div>
                 <div className="flex flex-col items-end justify-between w-3">
                   {Array.from({
-                    length: daysLived !== null ? Number(lifeExpectancy) : 20,
+                    length: daysLived !== 0 ? Number(lifeExpectancy) : 20,
                   }).map((_, i) => (
                     <div key={i} className="text-[8px]">
                       {i + 1}
@@ -163,14 +164,14 @@ function HomeContent() {
                   ))}
                 </div>
                 <div className="flex-1">
-                  {daysLived !== null ? (
+                  {daysLived !== 0 ? (
                     <div className="boxes">
                       {renderWeekBoxes(
                         weeksLived ?? 0,
                         (lifeExpectancy ?? 0) * 52,
                         weeksWorked ?? 0,
-                        workWeeksLeft,
-                        sleepWeeksLeft,
+                        workWeeksLeft ?? 0,
+                        sleepWeeksLeft ?? 0,
                         birthDate
                       )}
                     </div>
@@ -196,9 +197,17 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <LanguageProvider>
-      <LanguageToggle className="absolute top-4 right-16 md:top-8 md:right-20" />
-      <HomeContent />
-    </LanguageProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <LanguageProvider>
+        <LanguageToggle className="absolute top-4 right-16 md:top-8 md:right-20" />
+        <ModeToggle className="absolute top-4 right-4 md:top-8 md:right-8" />
+        <HomeContent />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
