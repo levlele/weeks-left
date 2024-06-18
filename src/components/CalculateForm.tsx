@@ -17,6 +17,8 @@ interface CalculateFormProps {
   setLifeExpectancy: (value: number) => void;
   yearsWorked: number;
   setYearsWorked: (value: number) => void;
+  workHoursPerDay: number;
+  setWorkHoursPerDay: (value: number) => void;
   retirementAge: number;
   setRetirementAge: (value: number) => void;
   sleepHoursPerDay: number;
@@ -31,6 +33,8 @@ export function CalculateForm({
   setLifeExpectancy,
   yearsWorked,
   setYearsWorked,
+  workHoursPerDay,
+  setWorkHoursPerDay,
   retirementAge,
   setRetirementAge,
   sleepHoursPerDay,
@@ -65,7 +69,7 @@ export function CalculateForm({
           value={lifeExpectancy}
           className="mt-2 mb-4"
           onChange={(e) => setLifeExpectancy(Number(e.target.value))}
-          placeholder="Expected Life Expectancy"
+          placeholder={texts[language].life_expectancy}
           required
         />
         <Label htmlFor="yearsWorked">{texts[language].years_worked}</Label>
@@ -76,6 +80,18 @@ export function CalculateForm({
           className="mt-2 mb-4"
           onChange={(e) => setYearsWorked(Number(e.target.value))}
           placeholder="Years Worked"
+          required
+        />
+        <Label htmlFor="workHoursPerDay">
+          {texts[language].hours_worked_per_day}
+        </Label>
+        <Input
+          id="workHoursPerDay"
+          type="number"
+          value={workHoursPerDay}
+          className="mt-2 mb-4"
+          onChange={(e) => setWorkHoursPerDay(Number(e.target.value))}
+          placeholder="Hours Worked Per Day"
           required
         />
         <Label htmlFor="retirementAge">{texts[language].retirement_age}</Label>
