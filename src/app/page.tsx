@@ -21,31 +21,7 @@ import texts from "@/locales/texts.json";
 function HomeContent() {
   const { language } = useLanguage();
 
-  // const [birthDate, setBirthDate] = useState<string>("1984-05-15");
-  // const [daysLived, setDaysLived] = useState<number>(0);
-  // const [weeksLived, setWeeksLived] = useState<number>(0);
-  // const [yearsLived, setYearsLived] = useState<number>(0);
-
-  // const [daysWorked, setDaysWorked] = useState<number>(0);
-  // const [yearsWorked, setYearsWorked] = useState<number>(23);
-  // const [weeksWorked, setWeeksWorked] = useState<number>(0);
-
-  // const [lifeExpectancy, setLifeExpectancy] = useState<number>(76);
-  // const [retirementAge, setRetirementAge] = useState<number>(65);
-
-  // const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
-  // const [weeksLifeLeft, setWeeksLifeLeft] = useState<number>(0);
-  // const [yearsLifeLeft, setYearsLifeLeft] = useState<number>(0);
-
-  // const [workHoursPerDay, setWorkHoursPerDay] = useState<number>(8);
-  // const [workDaysLeft, setWorkDaysLeft] = useState<number>(0);
-  // const [workWeeksLeft, setWorkWeeksLeft] = useState<number>(0);
-  // const [workYearsLeft, setWorkYearsLeft] = useState<number>(0);
-
-  // const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number>(8);
-  // const [sleepDaysLeft, setSleepDaysLeft] = useState<number>(0);
-  // const [sleepWeeksLeft, setSleepWeeksLeft] = useState<number>(0);
-  // const [sleepYearsLeft, setSleepYearsLeft] = useState<number>(0);
+  const [lifeExpectancy, setLifeExpectancy] = useState<number | null>(null);
 
   const [birthDate, setBirthDate] = useState<string>("");
   const [daysLived, setDaysLived] = useState<number>(0);
@@ -53,22 +29,21 @@ function HomeContent() {
   const [yearsLived, setYearsLived] = useState<number>(0);
 
   const [daysWorked, setDaysWorked] = useState<number>(0);
-  const [yearsWorked, setYearsWorked] = useState<number>(0);
+  const [yearsWorked, setYearsWorked] = useState<number | null>(null);
   const [weeksWorked, setWeeksWorked] = useState<number>(0);
-
-  const [lifeExpectancy, setLifeExpectancy] = useState<number>(0);
-  const [retirementAge, setRetirementAge] = useState<number>(0);
 
   const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
   const [weeksLifeLeft, setWeeksLifeLeft] = useState<number>(0);
   const [yearsLifeLeft, setYearsLifeLeft] = useState<number>(0);
 
-  const [workHoursPerDay, setWorkHoursPerDay] = useState<number>(0);
+  const [workHoursPerDay, setWorkHoursPerDay] = useState<number | null>(null);
   const [workDaysLeft, setWorkDaysLeft] = useState<number>(0);
   const [workWeeksLeft, setWorkWeeksLeft] = useState<number>(0);
   const [workYearsLeft, setWorkYearsLeft] = useState<number>(0);
 
-  const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number>(0);
+  const [retirementAge, setRetirementAge] = useState<number | null>(null);
+
+  const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number | null>(null);
   const [sleepDaysLeft, setSleepDaysLeft] = useState<number>(0);
   const [sleepWeeksLeft, setSleepWeeksLeft] = useState<number>(0);
   const [sleepYearsLeft, setSleepYearsLeft] = useState<number>(0);
@@ -81,25 +56,25 @@ function HomeContent() {
     const yearsLived = Math.floor(daysLived / 365.25);
     setYearsLived(yearsLived);
 
-    const daysWorked = Math.floor(yearsWorked * 365.25);
+    const daysWorked = Math.floor((yearsWorked ?? 0) * 365.25);
     setDaysWorked(daysWorked);
     const weeksWorked = Math.floor(daysWorked / 7);
     setWeeksWorked(weeksWorked);
 
-    const yearsLifeLeft = lifeExpectancy - yearsLived;
+    const yearsLifeLeft = (lifeExpectancy ?? 0) - yearsLived;
     setYearsLifeLeft(yearsLifeLeft);
-    const daysLifeLeft = lifeExpectancy * 365.25 - daysLived;
+    const daysLifeLeft = Math.floor((lifeExpectancy ?? 0) * 365.25 - daysLived);
     setDaysLifeLeft(daysLifeLeft);
     const weeksLifeLeft = Math.floor(daysLifeLeft / 7);
     setWeeksLifeLeft(weeksLifeLeft);
 
-    const workYearsLeft = retirementAge - yearsLived;
-    const workTime = calculateWorkTime(workHoursPerDay, workYearsLeft);
+    const workYearsLeft = (retirementAge ?? 0) - yearsLived;
+    const workTime = calculateWorkTime(workHoursPerDay ?? 0, workYearsLeft);
     setWorkDaysLeft(Math.floor(workTime.days));
     setWorkWeeksLeft(Math.floor(workTime.weeks));
     setWorkYearsLeft(workYearsLeft);
 
-    const sleepTime = calculateSleepTime(sleepHoursPerDay, yearsLifeLeft);
+    const sleepTime = calculateSleepTime(sleepHoursPerDay ?? 0, yearsLifeLeft);
     setSleepDaysLeft(Math.floor(sleepTime.days));
     setSleepWeeksLeft(Math.floor(sleepTime.weeks));
     setSleepYearsLeft(Math.floor(sleepTime.years));
@@ -134,7 +109,7 @@ function HomeContent() {
             yearsLived={yearsLived}
             daysWorked={daysWorked}
             weeksWorked={weeksWorked}
-            yearsWorked={yearsWorked}
+            yearsWorked={yearsWorked ?? 0}
             workDaysLeft={workDaysLeft}
             workWeeksLeft={workWeeksLeft}
             workYearsLeft={workYearsLeft}
@@ -160,7 +135,7 @@ function HomeContent() {
             weeksWorked={weeksWorked}
             workWeeksLeft={workWeeksLeft}
             sleepWeeksLeft={sleepWeeksLeft}
-            lifeExpectancy={lifeExpectancy}
+            lifeExpectancy={lifeExpectancy ?? 0}
             birthDate={birthDate}
           />
         </Card>
