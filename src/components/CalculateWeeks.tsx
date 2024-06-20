@@ -115,7 +115,9 @@ export function CalculateWeeks({
   return (
     <>
       <CardHeader>
-        <CardTitle>{texts[language].calculate_weeks_left}</CardTitle>
+        <CardTitle className="text-primary">
+          {texts[language].calculate_weeks_left}
+        </CardTitle>
         <CardDescription>
           {texts[language].calculate_weeks_left_description}
         </CardDescription>
@@ -136,7 +138,7 @@ export function CalculateWeeks({
             />
           </div>
         ))}
-        <Button onClick={handleCalculate} className="mt-4">
+        <Button onClick={handleCalculate} className="mt-4" size="lg">
           {texts[language].calculate}
         </Button>
       </CardContent>

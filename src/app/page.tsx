@@ -81,11 +81,17 @@ function HomeContent() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 md:p-8 md:py-14">
-      <h1 className="text-balance text-lg md:text-2xl font-bold max-w-52 md:max-w-full">
-        {texts[language].title}
-      </h1>
-      <main className="flex gap-4 mt-8 flex-col md:mt-12 md:flex-row md:items-start">
+    <div className="max-w-7xl mx-auto py-12 px-4 md:py-14">
+      <header className="relative flex justify-between items-center">
+        <h1 className="text-2xl md:text-5xl font-bold text-primary border-l-8 pl-4 flex-1 uppercase">
+          {texts[language].title}
+        </h1>
+        <div className=" flex gap-x-2">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
+      </header>
+      <main className="flex gap-4 mt-12 flex-col md:mt-12 md:flex-row md:items-start">
         <Card className="md:basis-1/2">
           <CalculateWeeks
             birthDate={birthDate}
@@ -153,8 +159,6 @@ export default function Home() {
       disableTransitionOnChange
     >
       <LanguageProvider>
-        <LanguageToggle className="absolute top-8 right-16 md:top-12 md:right-20" />
-        <ThemeToggle className="absolute top-8 right-4 md:top-12 md:right-8" />
         <HomeContent />
       </LanguageProvider>
     </ThemeProvider>
