@@ -7,10 +7,9 @@ import {
   ScrollBar,
   CardHeader,
   CardDescription,
-} from "@/components/ui";
-import { renderWeekBoxes } from "@/components/";
+  renderWeekBoxes,
+} from "@/components/";
 import texts from "@/locales/texts.json";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface RenderWeeksProps {
   daysLived: number | null;
@@ -42,55 +41,45 @@ export function RenderWeeks({
       </CardHeader>
       <CardContent>
         <ScrollArea className="w-full whitespace-nowrap">
-          <div className="flex flex-row justify-evenly gap-0.5 pl-4">
-            {Array.from({ length: 52 }).map((_, i) => (
-              <div key={i} className="text-[7px] w-full text-center">
-                {i + 1}
+          {daysLived !== 0 ? (
+            <div className="panel-grid grid gap-0.5">
+              <div className="col-span-1 flex flex-col gap-0.5">
+                <div className="aspect-square w-full" />
+                {Array.from({
+                  length: Number(lifeExpectancy),
+                }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="aspect-square w-full place-content-center overflow-hidden text-center text-[4px] leading-none md:text-[8px]"
+                  >
+                    {i + 1}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="flex gap-1 mt-1">
-            <div className="flex flex-col items-end justify-between w-3">
-              {Array.from({
-                length: daysLived !== 0 ? Number(lifeExpectancy) : 20,
-              }).map((_, i) => (
-                <div key={i} className="text-[8px]">
-                  {i + 1}
-                </div>
-              ))}
-            </div>
-            <div className="flex-1">
-              <AnimatePresence mode="wait">
-                {daysLived !== 0 ? (
-                  <motion.div
-                    className="boxes"
-                    key="renderedBoxes"
-                    initial={{ opacity: 0, translateY: 100 }}
-                    animate={{ opacity: 1, translateY: 0 }}
-                    exit={{ opacity: 0, translateY: 100 }}
+
+              <div className="week-grid grid gap-0.5" key="renderedBoxes">
+                {Array.from({ length: 52 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="week col-span-1 aspect-square w-full place-content-center overflow-hidden text-center text-[5px] leading-none md:text-[8px]"
                   >
-                    {renderWeekBoxes(
-                      weeksLived ?? 0,
-                      (lifeExpectancy ?? 0) * 52,
-                      weeksWorked ?? 0,
-                      workWeeksLeft ?? 0,
-                      sleepWeeksLeft ?? 0,
-                      birthDate
-                    )}
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="skeletonBoxes"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    <Skeleton className="w-full h-auto aspect-video" />
-                  </motion.div>
+                    {i + 1}
+                  </div>
+                ))}
+
+                {renderWeekBoxes(
+                  weeksLived ?? 0,
+                  (lifeExpectancy ?? 0) * 52,
+                  weeksWorked ?? 0,
+                  workWeeksLeft ?? 0,
+                  sleepWeeksLeft ?? 0,
+                  birthDate,
                 )}
-              </AnimatePresence>
+              </div>
             </div>
-          </div>
+          ) : (
+            <Skeleton className="aspect-video h-auto w-full" />
+          )}
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </CardContent>
