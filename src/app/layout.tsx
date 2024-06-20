@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
   title: "Weeks Left: Countdown to Doom",
-  description: "Calculate your remaining life years!",
+  description: "Calculate your remaining life weeks!",
   authors: [{ name: "Leandro Vilanova", url: "https://leandro-vilanova.com/" }],
   keywords: [
     "life expectancy calculator",
@@ -18,8 +18,6 @@ export const metadata: Metadata = {
     "time remaining calculator",
     "personal life expectancy",
   ],
-  themeColor: "#c5ff48",
-  colorScheme: "dark light",
 };
 
 export default function RootLayout({
