@@ -32,7 +32,7 @@ export const renderWeekBoxes = (
   weeksWorked: number,
   workWeeksLeft: number,
   sleepWeeksLeft: number,
-  birthDate: string
+  birthDate: string,
 ) => {
   const birthDateObj = new Date(birthDate);
   const startWeek = getWeekOfYear(birthDateObj);
@@ -75,7 +75,10 @@ export const renderWeekBoxes = (
     }
 
     boxes.push(
-      <div key={weeks} className={cn(boxesVariants({ variant: boxVariant }))} />
+      <div
+        key={weeks}
+        className={cn(boxesVariants({ variant: boxVariant }))}
+      />,
     );
   }
   return boxes;
