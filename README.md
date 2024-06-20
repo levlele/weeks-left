@@ -9,3 +9,6 @@ App to display the number of weeks left in your life, based on your birth date, 
 - [x] Fix sleep hours logic.
 - [x] Add transition in the boxes display.
 - [x] Divide page.tsx into smaller components.
+- [ ] Fix mobile visualization.
+- [x] Fix input bug when typing it doesn't delete the placeholder.
+- [x] Fix select bug.
