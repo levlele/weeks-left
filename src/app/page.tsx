@@ -21,6 +21,33 @@ import texts from "@/locales/texts.json";
 function HomeContent() {
   const { language } = useLanguage();
 
+  // const [lifeExpectancy, setLifeExpectancy] = useState<number | null>(76);
+
+  // const [birthDate, setBirthDate] = useState<string>("1984-05-15");
+  // const [daysLived, setDaysLived] = useState<number>(0);
+  // const [weeksLived, setWeeksLived] = useState<number>(0);
+  // const [yearsLived, setYearsLived] = useState<number>(0);
+
+  // const [daysWorked, setDaysWorked] = useState<number>(0);
+  // const [yearsWorked, setYearsWorked] = useState<number | null>(23);
+  // const [weeksWorked, setWeeksWorked] = useState<number>(0);
+
+  // const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
+  // const [weeksLifeLeft, setWeeksLifeLeft] = useState<number>(0);
+  // const [yearsLifeLeft, setYearsLifeLeft] = useState<number>(0);
+
+  // const [workHoursPerDay, setWorkHoursPerDay] = useState<number | null>(8);
+  // const [workDaysLeft, setWorkDaysLeft] = useState<number>(0);
+  // const [workWeeksLeft, setWorkWeeksLeft] = useState<number>(0);
+  // const [workYearsLeft, setWorkYearsLeft] = useState<number>(0);
+
+  // const [retirementAge, setRetirementAge] = useState<number | null>(65);
+
+  // const [sleepHoursPerDay, setSleepHoursPerDay] = useState<number | null>(8);
+  // const [sleepDaysLeft, setSleepDaysLeft] = useState<number>(0);
+  // const [sleepWeeksLeft, setSleepWeeksLeft] = useState<number>(0);
+  // const [sleepYearsLeft, setSleepYearsLeft] = useState<number>(0);
+
   const [lifeExpectancy, setLifeExpectancy] = useState<number | null>(null);
 
   const [birthDate, setBirthDate] = useState<string>("");
@@ -81,17 +108,17 @@ function HomeContent() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-12 px-4 md:py-14">
-      <header className="relative flex justify-between items-center">
-        <h1 className="text-2xl md:text-5xl font-bold text-primary border-l-8 pl-4 flex-1 uppercase">
+    <div className="mx-auto max-w-7xl px-4 py-12 md:py-14">
+      <header className="relative flex items-center justify-between">
+        <h1 className="flex-1 border-l-8 pl-4 text-2xl font-bold uppercase text-primary md:text-5xl">
           {texts[language].title}
         </h1>
-        <div className=" flex gap-x-2">
+        <div className="flex gap-x-2">
           <LanguageToggle />
           <ThemeToggle />
         </div>
       </header>
-      <main className="flex gap-4 mt-12 flex-col md:mt-12 md:flex-row md:items-start">
+      <main className="mt-12 flex flex-col gap-4 md:mt-12 md:flex-row md:items-start">
         <Card className="md:basis-1/2">
           <CalculateWeeks
             birthDate={birthDate}
@@ -134,7 +161,7 @@ function HomeContent() {
             />
           </CardFooter>
         </Card>
-        <Card className="pt-2 md:pt-1 md:w-full">
+        <Card className="pt-2 md:w-full md:pt-1">
           <RenderWeeks
             daysLived={daysLived}
             weeksLived={weeksLived}
