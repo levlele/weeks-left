@@ -10,10 +10,10 @@ import {
   Card,
   Separator,
   CardFooter,
-  CalculateForm,
+  CalculateWeeks,
   DataTable,
   LanguageToggle,
-  ModeToggle,
+  ThemeToggle,
   RenderWeeks,
 } from "@/components/";
 import texts from "@/locales/texts.json";
@@ -112,7 +112,7 @@ function HomeContent() {
       </h1>
       <main className="flex gap-4 mt-8 flex-col md:mt-12 md:flex-row md:items-start">
         <Card className="md:basis-1/2">
-          <CalculateForm
+          <CalculateWeeks
             birthDate={birthDate}
             setBirthDate={setBirthDate}
             lifeExpectancy={lifeExpectancy}
@@ -179,7 +179,7 @@ export default function Home() {
     >
       <LanguageProvider>
         <LanguageToggle className="absolute top-8 right-16 md:top-12 md:right-20" />
-        <ModeToggle className="absolute top-8 right-4 md:top-12 md:right-8" />
+        <ThemeToggle className="absolute top-8 right-4 md:top-12 md:right-8" />
         <HomeContent />
       </LanguageProvider>
     </ThemeProvider>

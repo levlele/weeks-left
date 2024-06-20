@@ -14,7 +14,7 @@ import {
 } from "@/components";
 import texts from "@/locales/texts.json";
 
-export function ModeToggle({ className }: { className?: string }) {
+export function ThemeToggle({ className }: { className?: string }) {
   const { setTheme } = useTheme();
   const { language } = useLanguage();
 

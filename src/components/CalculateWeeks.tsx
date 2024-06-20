@@ -12,7 +12,7 @@ import {
 import texts from "@/locales/texts.json";
 import { useLanguage } from "@/context/LanguageContext";
 
-interface CalculateFormProps {
+interface CalculateWeeksProps {
   birthDate: string;
   setBirthDate: (value: string) => void;
   lifeExpectancy: number;
@@ -28,7 +28,7 @@ interface CalculateFormProps {
   handleCalculate: () => void;
 }
 
-export function CalculateForm({
+export function CalculateWeeks({
   birthDate,
   setBirthDate,
   lifeExpectancy,
@@ -42,7 +42,7 @@ export function CalculateForm({
   sleepHoursPerDay,
   setSleepHoursPerDay,
   handleCalculate,
-}: CalculateFormProps) {
+}: CalculateWeeksProps) {
   const { language } = useLanguage();
 
   const inputFields = [
