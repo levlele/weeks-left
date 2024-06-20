@@ -1,0 +1,1067 @@
+[
+  {
+    "country_name": "Aruba",
+    "country_code": "ABW",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Afganistán",
+    "country_code": "AFG",
+    "life_expectancy": 63
+  },
+  {
+    "country_name": "Angola",
+    "country_code": "AGO",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Albania",
+    "country_code": "ALB",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Emiratos Árabes Unidos",
+    "country_code": "ARE",
+    "life_expectancy": 79
+  },
+  {
+    "country_name": "Argentina",
+    "country_code": "ARG",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Armenia",
+    "country_code": "ARM",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Antigua y Barbuda",
+    "country_code": "ATG",
+    "life_expectancy": 79
+  },
+  {
+    "country_name": "Australia",
+    "country_code": "AUS",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Austria",
+    "country_code": "AUT",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Azerbaiyán",
+    "country_code": "AZE",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Burundi",
+    "country_code": "BDI",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Bélgica",
+    "country_code": "BEL",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Benin",
+    "country_code": "BEN",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "Burkina Faso",
+    "country_code": "BFA",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "Bangladesh",
+    "country_code": "BGD",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Bulgaria",
+    "country_code": "BGR",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Bahrein",
+    "country_code": "BHR",
+    "life_expectancy": 79
+  },
+  {
+    "country_name": "Bahamas",
+    "country_code": "BHS",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Bosnia y Herzegovina",
+    "country_code": "BIH",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Belarús",
+    "country_code": "BLR",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Belice",
+    "country_code": "BLZ",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Bermudas",
+    "country_code": "BMU",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Bolivia",
+    "country_code": "BOL",
+    "life_expectancy": 65
+  },
+  {
+    "country_name": "Brasil",
+    "country_code": "BRA",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Barbados",
+    "country_code": "BRB",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Brunei Darussalam",
+    "country_code": "BRN",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Bhután",
+    "country_code": "BTN",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Botswana",
+    "country_code": "BWA",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Canadá",
+    "country_code": "CAN",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Suiza",
+    "country_code": "CHE",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Islas del Canal",
+    "country_code": "CHI",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Chile",
+    "country_code": "CHL",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "China",
+    "country_code": "CHN",
+    "life_expectancy": 79
+  },
+  {
+    "country_name": "Côte d'Ivoire",
+    "country_code": "CIV",
+    "life_expectancy": 59
+  },
+  {
+    "country_name": "Camerún",
+    "country_code": "CMR",
+    "life_expectancy": 61
+  },
+  {
+    "country_name": "Congo, República Democrática del Congo",
+    "country_code": "COD",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "Congo, República del Congo",
+    "country_code": "COG",
+    "life_expectancy": 63
+  },
+  {
+    "country_name": "Colombia",
+    "country_code": "COL",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Comoras",
+    "country_code": "COM",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Cabo Verde",
+    "country_code": "CPV",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Costa Rica",
+    "country_code": "CRI",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Estados pequeos del Caribe",
+    "country_code": "CSS",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Cuba",
+    "country_code": "CUB",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Curacao",
+    "country_code": "CUW",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Chipre",
+    "country_code": "CYP",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "República Checa",
+    "country_code": "CZE",
+    "life_expectancy": 79
+  },
+  {
+    "country_name": "Alemania",
+    "country_code": "DEU",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Djibouti",
+    "country_code": "DJI",
+    "life_expectancy": 63
+  },
+  {
+    "country_name": "Dominica",
+    "country_code": "DMA",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Dinamarca",
+    "country_code": "DNK",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "República Dominicana",
+    "country_code": "DOM",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Argelia",
+    "country_code": "DZA",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Ecuador",
+    "country_code": "ECU",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Egipto, República Árabe de",
+    "country_code": "EGY",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "Zona del Euro",
+    "country_code": "EMU",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Eritrea",
+    "country_code": "ERI",
+    "life_expectancy": 67
+  },
+  {
+    "country_name": "España",
+    "country_code": "ESP",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Estonia",
+    "country_code": "EST",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Etiopía",
+    "country_code": "ETH",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Finlandia",
+    "country_code": "FIN",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Fiji",
+    "country_code": "FJI",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Francia",
+    "country_code": "FRA",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Islas Feroe",
+    "country_code": "FRO",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Micronesia",
+    "country_code": "FSM",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Gabón",
+    "country_code": "GAB",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Reino Unido",
+    "country_code": "GBR",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Georgia",
+    "country_code": "GEO",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Ghana",
+    "country_code": "GHA",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Gibraltar",
+    "country_code": "GIB",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Guinea",
+    "country_code": "GIN",
+    "life_expectancy": 59
+  },
+  {
+    "country_name": "Gambia",
+    "country_code": "GMB",
+    "life_expectancy": 63
+  },
+  {
+    "country_name": "Guinea-Bissau",
+    "country_code": "GNB",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "Guinea Ecuatorial",
+    "country_code": "GNQ",
+    "life_expectancy": 61
+  },
+  {
+    "country_name": "Grecia",
+    "country_code": "GRC",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Granada",
+    "country_code": "GRD",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Groenlandia",
+    "country_code": "GRL",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Guatemala",
+    "country_code": "GTM",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Guam",
+    "country_code": "GUM",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Guyana",
+    "country_code": "GUY",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Ingreso alto",
+    "country_code": "HIC",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "Hong Kong, Región Administrativa Especial",
+    "country_code": "HKG",
+    "life_expectancy": 84
+  },
+  {
+    "country_name": "Honduras",
+    "country_code": "HND",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Croacia",
+    "country_code": "HRV",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Haití",
+    "country_code": "HTI",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Hungría",
+    "country_code": "HUN",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Indonesia",
+    "country_code": "IDN",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Isla de Man",
+    "country_code": "IMN",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "India",
+    "country_code": "IND",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Irlanda",
+    "country_code": "IRL",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Irán",
+    "country_code": "IRN",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Iraq",
+    "country_code": "IRQ",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Islandia",
+    "country_code": "ISL",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Israel",
+    "country_code": "ISR",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Italia",
+    "country_code": "ITA",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Jamaica",
+    "country_code": "JAM",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Jordania",
+    "country_code": "JOR",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Japón",
+    "country_code": "JPN",
+    "life_expectancy": 84
+  },
+  {
+    "country_name": "Kazajstán",
+    "country_code": "KAZ",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Kenya",
+    "country_code": "KEN",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Kirguistán",
+    "country_code": "KGZ",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Camboya",
+    "country_code": "KHM",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "Kiribati",
+    "country_code": "KIR",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Saint Kitts y Nevis",
+    "country_code": "KNA",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Corea, República de",
+    "country_code": "KOR",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Kuwait",
+    "country_code": "KWT",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "República Democrática Popular Lao",
+    "country_code": "LAO",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Líbano",
+    "country_code": "LBN",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Liberia",
+    "country_code": "LBR",
+    "life_expectancy": 61
+  },
+  {
+    "country_name": "Libia",
+    "country_code": "LBY",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Santa Lucía",
+    "country_code": "LCA",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Liechtenstein",
+    "country_code": "LIE",
+    "life_expectancy": 84
+  },
+  {
+    "country_name": "Sri Lanka",
+    "country_code": "LKA",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Lesotho",
+    "country_code": "LSO",
+    "life_expectancy": 53
+  },
+  {
+    "country_name": "Lituania",
+    "country_code": "LTU",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Luxemburgo",
+    "country_code": "LUX",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Letonia",
+    "country_code": "LVA",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Región Administrativa Especial de Macao, China",
+    "country_code": "MAC",
+    "life_expectancy": 85
+  },
+  {
+    "country_name": "Isla de San Martín (parte francesa)",
+    "country_code": "MAF",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Marruecos",
+    "country_code": "MAR",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "República de Moldova",
+    "country_code": "MDA",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Madagascar",
+    "country_code": "MDG",
+    "life_expectancy": 65
+  },
+  {
+    "country_name": "Maldivas",
+    "country_code": "MDV",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Oriente Medio y Norte de África",
+    "country_code": "MEA",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "México",
+    "country_code": "MEX",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Islas Marshall",
+    "country_code": "MHL",
+    "life_expectancy": 65
+  },
+  {
+    "country_name": "Macedonia del Norte",
+    "country_code": "MKD",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Malí",
+    "country_code": "MLI",
+    "life_expectancy": 59
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MLT",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Myanmar",
+    "country_code": "MMR",
+    "life_expectancy": 67
+  },
+  {
+    "country_name": "Montenegro",
+    "country_code": "MNE",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Mongolia",
+    "country_code": "MNG",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Mozambique",
+    "country_code": "MOZ",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "Mauritania",
+    "country_code": "MRT",
+    "life_expectancy": 65
+  },
+  {
+    "country_name": "Mauricio",
+    "country_code": "MUS",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Malawi",
+    "country_code": "MWI",
+    "life_expectancy": 63
+  },
+  {
+    "country_name": "Malasia",
+    "country_code": "MYS",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Namibia",
+    "country_code": "NAM",
+    "life_expectancy": 58
+  },
+  {
+    "country_name": "Nueva Caledonia",
+    "country_code": "NCL",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Níger",
+    "country_code": "NER",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Nigeria",
+    "country_code": "NGA",
+    "life_expectancy": 54
+  },
+  {
+    "country_name": "Nicaragua",
+    "country_code": "NIC",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Países Bajos",
+    "country_code": "NLD",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Noruega",
+    "country_code": "NOR",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Nepal",
+    "country_code": "NPL",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "Nauru",
+    "country_code": "NRU",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Nueva Zelandia",
+    "country_code": "NZL",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Omán",
+    "country_code": "OMN",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Pakistán",
+    "country_code": "PAK",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Panamá",
+    "country_code": "PAN",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Perú",
+    "country_code": "PER",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Filipinas",
+    "country_code": "PHL",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Papua Nueva Guinea",
+    "country_code": "PNG",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Polonia",
+    "country_code": "POL",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Puerto Rico",
+    "country_code": "PRI",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "Corea, República Popular Democrática de",
+    "country_code": "PRK",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Portugal",
+    "country_code": "PRT",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Paraguay",
+    "country_code": "PRY",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "Polinesia Francesa",
+    "country_code": "PYF",
+    "life_expectancy": 84
+  },
+  {
+    "country_name": "Qatar",
+    "country_code": "QAT",
+    "life_expectancy": 82
+  },
+  {
+    "country_name": "Rumania",
+    "country_code": "ROU",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Federación de Rusia",
+    "country_code": "RUS",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Rwanda",
+    "country_code": "RWA",
+    "life_expectancy": 67
+  },
+  {
+    "country_name": "Asia meridional",
+    "country_code": "SAS",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Arabia Saudita",
+    "country_code": "SAU",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Sudán",
+    "country_code": "SDN",
+    "life_expectancy": 66
+  },
+  {
+    "country_name": "Senegal",
+    "country_code": "SEN",
+    "life_expectancy": 68
+  },
+  {
+    "country_name": "Singapur",
+    "country_code": "SGP",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Islas Salomón",
+    "country_code": "SLB",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Sierra Leona",
+    "country_code": "SLE",
+    "life_expectancy": 60
+  },
+  {
+    "country_name": "El Salvador",
+    "country_code": "SLV",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Somalia",
+    "country_code": "SOM",
+    "life_expectancy": 56
+  },
+  {
+    "country_name": "Serbia",
+    "country_code": "SRB",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Sudán del Sur",
+    "country_code": "SSD",
+    "life_expectancy": 56
+  },
+  {
+    "country_name": "Santo Tomé y Príncipe",
+    "country_code": "STP",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Suriname",
+    "country_code": "SUR",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "República Eslovaca",
+    "country_code": "SVK",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Eslovenia",
+    "country_code": "SVN",
+    "life_expectancy": 81
+  },
+  {
+    "country_name": "Suecia",
+    "country_code": "SWE",
+    "life_expectancy": 83
+  },
+  {
+    "country_name": "Eswatini",
+    "country_code": "SWZ",
+    "life_expectancy": 56
+  },
+  {
+    "country_name": "Sint Maarten (Dutch part)",
+    "country_code": "SXM",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Seychelles",
+    "country_code": "SYC",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "República Árabe Siria",
+    "country_code": "SYR",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "Islas Turcas y Caicos",
+    "country_code": "TCA",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Chad",
+    "country_code": "TCD",
+    "life_expectancy": 53
+  },
+  {
+    "country_name": "Togo",
+    "country_code": "TGO",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Tailandia",
+    "country_code": "THA",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "Tayikistán",
+    "country_code": "TJK",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Turkmenistán",
+    "country_code": "TKM",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Timor-Leste",
+    "country_code": "TLS",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Tonga",
+    "country_code": "TON",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Trinidad y Tobago",
+    "country_code": "TTO",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Túnez",
+    "country_code": "TUN",
+    "life_expectancy": 74
+  },
+  {
+    "country_name": "Turquía",
+    "country_code": "TUR",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Tuvalu",
+    "country_code": "TUV",
+    "life_expectancy": 65
+  },
+  {
+    "country_name": "Tanzanía",
+    "country_code": "TZA",
+    "life_expectancy": 67
+  },
+  {
+    "country_name": "Uganda",
+    "country_code": "UGA",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Ucrania",
+    "country_code": "UKR",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Uruguay",
+    "country_code": "URY",
+    "life_expectancy": 78
+  },
+  {
+    "country_name": "Estados Unidos",
+    "country_code": "USA",
+    "life_expectancy": 77
+  },
+  {
+    "country_name": "Uzbekistán",
+    "country_code": "UZB",
+    "life_expectancy": 72
+  },
+  {
+    "country_name": "San Vicente y las Granadinas",
+    "country_code": "VCT",
+    "life_expectancy": 69
+  },
+  {
+    "country_name": "Venezuela",
+    "country_code": "VEN",
+    "life_expectancy": 71
+  },
+  {
+    "country_name": "Islas Vírgenes Británicas",
+    "country_code": "VGB",
+    "life_expectancy": 76
+  },
+  {
+    "country_name": "Islas Vírgenes (EE.UU.)",
+    "country_code": "VIR",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "Viet Nam",
+    "country_code": "VNM",
+    "life_expectancy": 75
+  },
+  {
+    "country_name": "Vanuatu",
+    "country_code": "VUT",
+    "life_expectancy": 70
+  },
+  {
+    "country_name": "Samoa",
+    "country_code": "WSM",
+    "life_expectancy": 73
+  },
+  {
+    "country_name": "Kosovo",
+    "country_code": "XKX",
+    "life_expectancy": 80
+  },
+  {
+    "country_name": "Yemen, Rep. del",
+    "country_code": "YEM",
+    "life_expectancy": 64
+  },
+  {
+    "country_name": "Sudáfrica",
+    "country_code": "ZAF",
+    "life_expectancy": 61
+  },
+  {
+    "country_name": "Zambia",
+    "country_code": "ZMB",
+    "life_expectancy": 62
+  },
+  {
+    "country_name": "Zimbabwe",
+    "country_code": "ZWE",
+    "life_expectancy": 59
+  }
+]
