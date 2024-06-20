@@ -6,8 +6,10 @@ import {
   calculateSleepTime,
   calculateWorkTime,
 } from "@/lib/utils";
-import { Card, Separator, CardFooter } from "@/components/ui";
 import {
+  Card,
+  Separator,
+  CardFooter,
   CalculateForm,
   DataTable,
   LanguageToggle,
@@ -28,7 +30,7 @@ function HomeContent() {
   // const [yearsWorked, setYearsWorked] = useState<number>(23);
   // const [weeksWorked, setWeeksWorked] = useState<number>(0);
 
-  // const [lifeExpectancy, setLifeExpectancy] = useState<number>(72);
+  // const [lifeExpectancy, setLifeExpectancy] = useState<number>(76);
   // const [retirementAge, setRetirementAge] = useState<number>(65);
 
   // const [daysLifeLeft, setDaysLifeLeft] = useState<number>(0);
