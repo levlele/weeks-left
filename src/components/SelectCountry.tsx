@@ -24,7 +24,6 @@ export function SelectCountry({ handleCountrySelect }: SelectCountryProps) {
     );
     if (selectedCountry) {
       handleCountrySelect(selectedCountry.life_expectancy);
-      console.log(selectedCountry.life_expectancy);
     }
   };
 
