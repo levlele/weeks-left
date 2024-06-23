@@ -131,7 +131,7 @@ export function CalculateWeeks({
               id={field.id}
               type={field.type}
               value={field.value as string | number}
-              className="mt-2 mb-4"
+              className="mb-4 mt-2"
               onChange={field.onChange}
               placeholder={field.placeholder}
               disabled={field.disabled}
