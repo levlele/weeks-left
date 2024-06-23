@@ -20,7 +20,7 @@ export function SelectCountry({ handleCountrySelect }: SelectCountryProps) {
 
   const handleSelect = (selectedCountryCode: string) => {
     const selectedCountry = countries.find(
-      (country) => country.country_code === selectedCountryCode
+      (country) => country.country_code === selectedCountryCode,
     );
     if (selectedCountry) {
       handleCountrySelect(selectedCountry.life_expectancy);
@@ -30,10 +30,12 @@ export function SelectCountry({ handleCountrySelect }: SelectCountryProps) {
   return (
     <>
       <Label htmlFor="bornCountry">{texts[language].born_country}</Label>
-      <div className="mt-2 mb-4">
-        <Select onValueChange={handleSelect} defaultValue="ARG">
+      <div className="mb-4 mt-2">
+        <Select onValueChange={handleSelect}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder={texts[language].born_country} />
+            <SelectValue
+              placeholder={texts[language].born_country_placeholder}
+            />
           </SelectTrigger>
 
           <SelectContent>
