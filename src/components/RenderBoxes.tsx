@@ -6,11 +6,11 @@ const boxesVariants = cva("w-full aspect-square", {
   variants: {
     variant: {
       default: "bg-secondary",
-      lived: "bg-green-500",
-      worked: "bg-green-700",
-      workLeft: "bg-red-500",
-      sleepLeft: "bg-red-700",
-      lifeLeft: "bg-red-900",
+      lived: "bg-red-900",
+      worked: "bg-red-700",
+      workLeft: "bg-green-900",
+      sleepLeft: "bg-green-700",
+      lifeLeft: "bg-green-500",
       remaining: "bg-secondary",
     },
   },
