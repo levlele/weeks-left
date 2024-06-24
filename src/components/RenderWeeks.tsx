@@ -78,7 +78,10 @@ export function RenderWeeks({
               </div>
             </div>
           ) : (
-            <Skeleton className="aspect-video h-auto w-full md:aspect-square" />
+            <div className="relative h-full w-full">
+              <div className="ascii-art absolute inset-0 animate-pulse bg-center bg-no-repeat opacity-50 delay-75" />
+              <Skeleton className="aspect-square h-auto w-full" />
+            </div>
           )}
           <ScrollBar orientation="horizontal" />
         </ScrollArea>

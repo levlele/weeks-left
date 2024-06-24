@@ -71,4 +71,9 @@
   .week-grid {
     grid-template-columns: repeat(52, 1fr);
   }
+
+  .ascii-art {
+    background-image: url("/skull.svg");
+    background-size: 75%;
+  }
 }
