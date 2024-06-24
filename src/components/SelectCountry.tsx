@@ -31,7 +31,7 @@ export function SelectCountry({ handleCountrySelect }: SelectCountryProps) {
     <>
       <Label htmlFor="bornCountry">{texts[language].born_country}</Label>
       <div className="mb-4 mt-2">
-        <Select onValueChange={handleSelect} required>
+        <Select onValueChange={handleSelect} required name="Select Country">
           <SelectTrigger className="w-full">
             <SelectValue
               placeholder={texts[language].born_country_placeholder}
