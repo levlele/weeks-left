@@ -112,6 +112,11 @@ export function CalculateWeeks({
     setLifeExpectancy(selectedLifeExpectancy);
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleCalculate();
+  };
+
   return (
     <>
       <CardHeader>
@@ -123,22 +128,25 @@ export function CalculateWeeks({
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <SelectCountry handleCountrySelect={handleCountrySelect} />
-        {inputFields.map((field) => (
-          <div key={field.id}>
-            <Label htmlFor={field.id}>{field.label}</Label>
-            <Input
-              id={field.id}
-              type={field.type}
-              value={field.value as string | number}
-              className="mb-4 mt-2"
-              onChange={field.onChange}
-              placeholder={field.placeholder}
-              disabled={field.disabled}
-            />
-          </div>
-        ))}
-        <Button onClick={handleCalculate} className="mt-4" size="lg">
+        <form id="calculate-form" onSubmit={handleSubmit}>
+          <SelectCountry handleCountrySelect={handleCountrySelect} />
+          {inputFields.map((field) => (
+            <div key={field.id}>
+              <Label htmlFor={field.id}>{field.label}</Label>
+              <Input
+                id={field.id}
+                type={field.type}
+                value={field.value as string | number}
+                className="mb-4 mt-2"
+                onChange={field.onChange}
+                placeholder={field.placeholder}
+                disabled={field.disabled}
+                required
+              />
+            </div>
+          ))}
+        </form>
+        <Button form="calculate-form" type="submit" className="mt-4" size="lg">
           {texts[language].calculate}
         </Button>
       </CardContent>
