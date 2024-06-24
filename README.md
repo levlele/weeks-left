@@ -13,4 +13,5 @@ App to display the number of weeks left in your life, based on your birth date, 
 - [x] Fix input bug when typing it doesn't delete the placeholder.
 - [x] Fix select bug.
 - [x] Modify light theme.
-- [ ] Prevent Submit if no input value is given.
+- [x] Prevent Submit if no input value is given.
+- [ ] Add custom required input messages and style..
