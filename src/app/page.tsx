@@ -1,11 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ThemeProvider, LanguageProvider, useLanguage } from "@/context/";
-import {
-  calculateDaysLived,
-  calculateSleepTime,
-  calculateWorkTime,
-} from "@/lib/utils";
+import { calculateDaysLived, calculateTimeSpent } from "@/lib/utils";
 import {
   Card,
   Separator,
@@ -96,12 +92,12 @@ function HomeContent() {
     setWeeksLifeLeft(weeksLifeLeft);
 
     const workYearsLeft = (retirementAge ?? 0) - yearsLived;
-    const workTime = calculateWorkTime(workHoursPerDay ?? 0, workYearsLeft);
+    const workTime = calculateTimeSpent(workHoursPerDay ?? 0, workYearsLeft);
     setWorkDaysLeft(Math.floor(workTime.days));
     setWorkWeeksLeft(Math.floor(workTime.weeks));
     setWorkYearsLeft(workYearsLeft);
 
-    const sleepTime = calculateSleepTime(sleepHoursPerDay ?? 0, yearsLifeLeft);
+    const sleepTime = calculateTimeSpent(sleepHoursPerDay ?? 0, yearsLifeLeft);
     setSleepDaysLeft(Math.floor(sleepTime.days));
     setSleepWeeksLeft(Math.floor(sleepTime.weeks));
     setSleepYearsLeft(Math.floor(sleepTime.years));
